@@ -13,9 +13,8 @@ jobs:
           - windows-latest
           - macos-latest
         nim-version:
-          - '1.0.10'
-          - '1.2.8'
-          - '1.4.0'
+          - stable
+          - devel
     steps:
       - uses: actions/checkout@v1
       - name: Cache choosenim
@@ -35,4 +34,6 @@ jobs:
       - uses: jiro4989/setup-nim-action@v1.1.4
         with:
           nim-version: ${{ matrix.nim-version }}
+      - run: nim --version
+      - run: nimble --version
       - run: nimble tests -Y
