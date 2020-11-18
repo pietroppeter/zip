@@ -12,9 +12,9 @@ jobs:
           - windows-latest
           - macos-latest
         nim-version:
-          - '1.0'
-          - '1.2'
-          - '1.4'
+          - '1.0.10'
+          - '1.2.8'
+          - '1.4.0'
     steps:
       - uses: actions/checkout@v1
       - name: Cache choosenim
