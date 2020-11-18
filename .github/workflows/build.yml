@@ -3,8 +3,8 @@ name: test
 on: [push, pull_request]
 
 jobs:
-  runs-on: ${{ matrix.os }}
   test:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os:
